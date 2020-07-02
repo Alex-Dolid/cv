@@ -2,7 +2,7 @@
 import $ from "jquery";
 import {pagesNames} from "src/init/pages";
 //styles
-import "styles/style";
+import "styles/index.scss";
 import "./index.scss";
 
 $(document).ready(function () {

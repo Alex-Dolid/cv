@@ -37,7 +37,7 @@ module.exports = function(path) {
                         {
                             loader: "sass-resources-loader",
                             options: {
-                                resources: paths.src + "/styles/_variables.scss"
+                                resources: paths.src + "/styles/style-guide/_variables.scss"
                             }
                         },
                         {

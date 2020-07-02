@@ -1,6 +1,6 @@
 h1 {
-  font-size: 2.6875rem; //43
-  line-height: 130%;
+  font-size: 4.6875rem; //43
+  line-height: 4.5rem;
 }
 
 h2 {
@@ -73,30 +73,3 @@ h5 {
   }
 }
 
-
-.title--md {
-  font-weight: 600;
-  font-size: 1.4375rem;
-  line-height: 120%;
-
-  @media ($tablet) {
-    font-size: 1.1875rem;
-  }
-  @media ($phone) {
-    font-size: 1.125rem;
-  }
-}
-
-.text__date {
-  font-weight: 500;
-  font-size: 1.1875rem;
-  line-height: 150%;
-  color: rgba($text-black, .5);
-
-  @media ($tablet) {
-    font-size: 1rem;
-  }
-  @media ($phone) {
-    font-size: 0.875rem;
-  }
-}

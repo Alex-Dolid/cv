@@ -1,0 +1,19 @@
+$white: #FFF;
+$black: #000;
+$middle-black: #333;
+$dark: #202020;
+$grey: #999;
+$silver: #ddd;
+
+// res
+$phoneWidth: 768px;
+$tabletWidth: 1024px;
+$desktopWidth: 1280px;
+$fullWidth: 1440px;
+$fullHDWidth: 1920px;
+// media
+$phone: "max-width: "+($phoneWidth - 1);
+$tablet: "max-width: "+($tabletWidth - 1);
+$desktop: "max-width: "+($desktopWidth - 1);
+$full: "max-width: "+($fullWidth - 1);
+$fullHD: "max-width: "+($fullHDWidth - 1);
