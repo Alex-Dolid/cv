@@ -1,0 +1,80 @@
+.btn {
+  display: flex;
+  align-items: center;
+
+  &__arrow {
+    &:after {
+      content: '';
+      background: url('/icons/btn-arrow.svg');
+      background-size: 28px 12px;
+      width: 28px;
+      height: 12px;
+      margin-left: 15px;
+      transition: transform 0.3s ease-in-out;
+
+      position: relative;
+      top: 3px;
+
+      @media ($tablet) {
+        background-size: 21px 8px;
+        width: 21px;
+        height: 8px;
+      }
+    }
+  }
+
+  &--primary {
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: $primary;
+    color: $white;
+
+    font-weight: 600;
+    font-size: 1.0625rem;
+    line-height: 115%;
+
+    .btn__icon {
+      margin-right: 10px;
+      @media ($phone) {
+        margin-right: 0;
+      }
+    }
+
+    @media ($tablet) {
+      font-size: 0.9375rem;
+    }
+    @media ($phone) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &--accent {
+    justify-content: center;
+    min-height: 50px;
+    width: 255px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: $accent;
+    color: $text-black;
+
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 130%;
+
+    &:hover {
+      &.btn__arrow:after{
+        transform: translateX(5px);
+      }
+    }
+
+    @media ($tablet) {
+      width: 230px;
+      font-size: 1.0625rem;
+    }
+    @media ($phone) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "/mixins";
+
+$primary: #2D5CA6;
+$accent: #ffe358;
+$danger: #F52B2B;
+$text-black: #0E2938;
+
+$alabaster: #F9F9F9;
+
+$white: #FFF;
+$gray: #AAB3C6;
+$light-gray: #F8FAFC;
+$granite: #8AA0B5;
+$blue: #1E4DBA;
+$green: #4BBF2D;
+$sky: #f5f7fa;
+
+$middle-grey: #E5E5E5;
+
+
+// res
+$phoneWidth: 768px;
+$tabletWidth: 1024px;
+$desktopWidth: 1170px;
+
+// media
+$phone: "max-width: " + ($phoneWidth - 1);
+$tablet: "max-width: " + ($tabletWidth - 1);
+$desktop: "max-width: " + ($desktopWidth - 1);

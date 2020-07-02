@@ -1,0 +1,19 @@
+$assetPath: "../assets/fonts/";
+
+@mixin font-face($name, $file, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url("#{$file}.eot");
+    src: url("#{$file}.eot?#iefix") format("embedded-opentype"),
+    url("#{$file}.woff2") format("woff2"), url("#{$file}.woff") format("woff"),
+    url("#{$file}.ttf") format("truetype"),
+    url("#{$file}.svg##{$file}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include font-face("ProbaPro", $assetPath + "ProbaPro-Regular", 400);
+@include font-face("ProbaPro", $assetPath + "ProbaPro-Medium", 500);
+@include font-face("ProbaPro", $assetPath + "ProbaPro-SemiBold", 600);
+@include font-face("ProbaPro", $assetPath + "ProbaPro-Bold", 700);
