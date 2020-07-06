@@ -1,0 +1,241 @@
+.header {
+  .navigation {
+    background-color: transparent;
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+
+    & > .container {
+      position: relative;
+    }
+
+    .navbar-brand {
+      height: auto;
+      padding: 9px 15px 8px;
+    }
+  }
+
+  #navbar {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    transition: all 0.5s;
+
+    & > ul li a:focus {
+      text-decoration: none;
+    }
+
+    li {
+      position: relative;
+    }
+
+  }
+
+  &_style-1 {
+    .navigation {
+      padding: 12px 0;
+    }
+
+    .menu-info {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      ul {
+        overflow: hidden;
+        list-style: none;
+
+        li {
+          font-size: 1.2rem;
+          padding-bottom: 2px;
+          float: left;
+          line-height: 1em;
+        }
+
+        .fi {
+          position: relative;
+          top: 3px;
+          display: inline-block;
+          padding-right: 3px;
+
+          &:before {
+            font-size: 1.46667rem;
+            color: $silver;
+          }
+        }
+      }
+
+      ul > li + li {
+        margin-left: 35px;
+      }
+    }
+
+    .menu-open-btn-holder {
+      background-color: $dark-black;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      right: 15px;
+      top: 22px;
+
+      button {
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        outline: 0;
+
+        span {
+          background-color: $white;
+          width: 27px;
+          height: 2px;
+          position: absolute;
+          top: 12px;
+          left: 9px;
+        }
+
+        & > span:nth-child(2) {
+          top: 22px;
+        }
+
+        & > span:nth-child(3) {
+          width: 18px;
+          top: 32px;
+        }
+      }
+    }
+
+    .navigation-holder.open-navigation-menu {
+      right: 0;
+    }
+
+    a img {
+      width: 100%;
+    }
+
+    .soft-skills,
+    .education {
+      padding: 0;
+    }
+
+    .home {
+      a {
+        position: relative;
+        width: 100%;
+        transition: all .5s;
+      }
+    }
+
+    .home a:before,
+    .about a:before,
+    .hard-skills a:before,
+    .portfolio a:before,
+    .soft-skills a:before,
+    .education a:before {
+      position: absolute;
+      left: 9px;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $black;
+      content: "";
+      z-index: 99;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      opacity: 0;
+      transition: all .5s;
+    }
+
+    .home a:after,
+    .about a:after,
+    .hard-skills a:after,
+    .portfolio a:after,
+    .soft-skills a:after,
+    .education a:after {
+      position: absolute;
+      left: 9px;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: "Home";
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      font-size: 40px;
+      color: #fff;
+      z-index: 999;
+      opacity: 0;
+      transition: all .5s;
+    }
+
+    .education a:after {
+      content: "Education";
+    }
+
+    .about a:after {
+      content: "About Me";
+    }
+
+    .hard-skills a:after {
+      content: "Hard Skills";
+    }
+
+    .portfolio a:after {
+      content: "Portfolio";
+    }
+
+    .soft-skills a:after {
+      content: "Soft Skills";
+    }
+
+    .home a:hover:after,
+    .about a:hover:after,
+    .hard-skills a:hover:after,
+    .portfolio a:hover:after,
+    .soft-skills a:hover:after,
+    .education a:hover:after {
+      opacity: 1;
+    }
+
+    .home a:hover:before,
+    .about a:hover:before,
+    .hard-skills a:hover:before,
+    .portfolio a:hover:before,
+    .soft-skills a:hover:before,
+    .education a:hover:before{
+      opacity: .9;
+    }
+
+    .nav > li > a {
+      padding: 0;
+    }
+
+    #navbar {
+      & > ul li a {
+        padding: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &_style-2 {
+    position: relative;
+  }
+
+  .close-navbar {
+    background-color: $black;
+    width: 40px;
+    height: 40px;
+    color: $white;
+    border: 0;
+    border-radius: 50%;
+    outline: none;
+    position: absolute;
+    left: -18px;
+    top: 10px;
+    z-index: 112;
+  }
+}

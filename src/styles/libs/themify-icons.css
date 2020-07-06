@@ -1,0 +1,25 @@
+@font-face {
+	font-family: 'themify';
+	src:url('../../assets/fonts/themify.woff?-fvbane');
+	src:url('../../assets/fonts/themify.woff?-fvbane') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="ti-"], [class*=" ti-"] {
+	font-family: 'themify';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ti-close:before {
+	content: "\e646";
+}

@@ -1,0 +1,4 @@
+mixin nav-list(className, href, imgName)
+    li(class=className)
+        a(href=href, aria-label=className)
+            img(src=require(`assets/images/home/${imgName}.jpg`).default, alt=className)

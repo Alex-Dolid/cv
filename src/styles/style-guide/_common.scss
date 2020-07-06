@@ -51,3 +51,36 @@ a:hover,
 a:focus {
   text-decoration: none;
 }
+
+.page-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.border {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background:rgba($dark-grey,.3);
+  z-index: -1;
+}
+.page-wrapper:before{
+  content: "";
+  position: absolute;
+  left: 18%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background:rgba($dark-grey,.3);
+  z-index: 99;
+}
+.page-wrapper:after{
+  content: "";
+  position: absolute;
+  right: 18%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background:rgba($dark-grey,.3);
+}
