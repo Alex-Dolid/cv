@@ -1,0 +1,25 @@
+include /mixins/nav-list/index
+
+header.site-header.header-style-1#header
+    nav.navigation.navbar.navbar-default
+        .container-fluid
+            .navbar-header
+                button(type="button").open-btn
+                    span.sr-only Toggle navigation
+                    each i in [1,2,3]
+                        span.icon-bar
+                a(href="/", aria-label="navbar-brand").navbar-brand
+                    img(src="src/assets/images/logo.png", alt="logo")
+            .navbar-collapse.collapse.navigation-holder#navbar
+                each i in [1,2]
+                    button(type="button", aria-label="close-navbar").close-navbar
+                        i.ti-close
+                ul.nav.navbar-nav
+                    each listObj in navList
+                        +nav-list(listObj.className, listObj.href, listObj.imgName)
+            .menu-open-btn-holder
+                button(type="button", aria-label="menu-open-btn").menu-open-btn
+                    each i in [1,2,3]
+                        span
+
+

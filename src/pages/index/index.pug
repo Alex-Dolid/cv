@@ -1,14 +1,6 @@
-block variables
+extends /layouts/main.pug
 
-<!DOCTYPE html>
-html(lang="en")
-    head
-        // Meta Tags
-        meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible" content="ie=edge")
-        meta(name="author" content="Alex Dolid")
-
-        // Page Title
-        title CV-Alex-Dolid
-    body
+block content
+    .page-wrapper#home
+        include /reusable/preloader/index
+        include /reusable/header/index
