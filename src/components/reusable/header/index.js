@@ -68,5 +68,65 @@ $(document).ready(function () {
 
   smallNavFunctionality();
 
+
+  // Function for clone an element for sticky menu
+  function cloneNavForSticyMenu($ele, $newElmClass) {
+    $ele.addClass('original').clone().insertAfter($ele).addClass($newElmClass).removeClass('original');
+  }
+
+  // clone home style 1 navigation for sticky menu
+  if ($('.site-header .navigation').length) {
+    cloneNavForSticyMenu($('.site-header .navigation'), "sticky-header");
+  }
+
+  let lastScrollTop = '';
+
+  function stickyMenu($targetMenu, $toggleClass) {
+    const st = $(window).scrollTop();
+    const mainMenuTop = $('.site-header .navigation');
+
+    if ($(window).scrollTop() > 1000) {
+      if (st > lastScrollTop) {
+        // hide sticky menu on scroll down
+        $targetMenu.removeClass($toggleClass);
+
+      } else {
+        // active sticky menu on scroll up
+        $targetMenu.addClass($toggleClass);
+      }
+
+    } else {
+      $targetMenu.removeClass($toggleClass);
+    }
+
+    lastScrollTop = st;
+  }
+
+
+  // HEADER STYLE 1 TOGGLE NAVIGATION SUBMENUS
+  if($(".header-style-1").length) {
+    const menuItem = $(".navigation-holder > ul .menu-item-has-children > a");
+    const menuItemParent = menuItem.parent();
+
+    menuItem.on("click", function(e) {
+      e.preventDefault();
+      const $this = $(this);
+      $this.next(".sub-menu").toggleClass("open-submenu");
+      $this.parent().siblings().find(".sub-menu").removeClass("open-submenu");
+    });
+
+    const navigationHolder = $(".header-style-1 .navigation-holder");
+    const menuOpenBtn = $(".header-style-1 .menu-open-btn");
+    const menuClosenBtn = $(".header-style-1 .close-navbar-2");
+
+    menuOpenBtn.on("click", function() {
+      navigationHolder.addClass("open-navigation-menu");
+    });
+
+    menuClosenBtn.on("click", function() {
+      navigationHolder.removeClass("open-navigation-menu");
+    });
+  }
+
 });
 
