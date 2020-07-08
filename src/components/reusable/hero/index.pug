@@ -1,0 +1,24 @@
+include ../../../data/hero
+include /mixins/social-links/index
+
+section.hero.hero-slider-wrapper.hero-style-1
+    .hero-slider
+        .slide(aria-label='slider')
+            .slider-image
+                img(src=require('assets/images/slider/alex2.jpg').default alt='slider').slider-bg
+            .container
+                .row
+                    .col.col-md-10.col-sm-10.slide-caption
+                        .slide-subtitle
+                            h4 #{presentationText}
+                        .slide-title
+                            h2 #{professionTitle}
+                        .contacts
+                            a(href=`mailto:${email}`) #{email}
+                            a(href=`tel:${tel}`) #{tel}
+                            a(href='#') #{location}
+                            a(title='Telegram' href=`tg://resolve?domain=${telegram}`) Telegram: #{telegram}
+    .copy
+        p #{professionLvl}
+    .social-links
+        +social-links()

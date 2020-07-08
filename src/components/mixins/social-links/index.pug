@@ -1,0 +1,8 @@
+include ../../../data/socialLinks
+
+mixin social-links()
+    ul
+        each linkObj in socialLinks
+            li
+                a(href=`${linkObj.link}` target='_blank' aria-label=`${linkObj.label}` rel='noopener noreferrer')
+                    i(class=`${linkObj.classIcon}`)
